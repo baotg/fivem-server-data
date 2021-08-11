@@ -13,4 +13,4 @@ tasks:
   - action: download_github
     src: https://github.com/tgiabao1340/fivem-server-data
     ref: master
-    dest: ./
+    dest: ./server-data
