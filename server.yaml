@@ -3,8 +3,17 @@ version: v1.2.3
 author: Toybarra
 description: A full featured (8 jobs) and highly configurable yet lightweight ESX v2 base that can be easily extendable. 
 
+variables:
+    dbHost: localhost
+    dbUsername: root
+    dbPassword: ""
+    dbName: null
+
 tasks: 
-    - action: download_github
-      src: https://github.com/tgiabao1340/fivem-server-data
-      ref: master
-      dest: ./
+    - action: download_file
+      url: https://github.com/citizenfx/cfx-server-data/archive/master.zip
+      path: ./tmp/cfx-server-data.zip
+
+    - action: another_task
+      optionA: aaaa
+      optionB: bbbbbb
