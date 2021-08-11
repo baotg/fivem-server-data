@@ -1,16 +1,10 @@
-$engine: 3
-$onesync: on
-name: QBCore Framework Build
-version: 1.3.0
-author: JericoFx & Kakarot & Mojito & Hamy
-description: Complete RP Server For FiveM
+name: PlumeESX2
+version: v1.2.3
+author: Toybarra
+description: A full featured (8 jobs) and highly configurable yet lightweight ESX v2 base that can be easily extendable. 
 
-tasks:
-  
-  
-  #  Download Files
-
-  - action: download_github
-    src: https://github.com/tgiabao1340/fivem-server-data
-    ref: master
-    dest: ./
+tasks: 
+    - action: download_github
+      src: https://github.com/tgiabao1340/fivem-server-data
+      ref: master
+      dest: ./
