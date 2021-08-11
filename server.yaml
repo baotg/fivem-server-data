@@ -1,0 +1,16 @@
+$engine: 3
+$onesync: on
+name: Dev server build
+version: 1.3.0
+author: OldPanther
+description: File server For FiveM
+
+tasks:
+  
+  
+  #  Download Files
+
+  - action: download_github
+    src: https://github.com/tgiabao1340/fivem-server-data
+    ref: master
+    dest: .
