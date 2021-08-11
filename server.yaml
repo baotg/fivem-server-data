@@ -12,4 +12,46 @@ tasks:
   - action: download_github
     src: https://github.com/tgiabao1340/fivem-server-data
     ref: main
-    dest: ./tmp/test
+    dest: ./tmp/fivem-server-data
+  
+  # Move into directories
+  - action: move_path
+    src: ./tmp/fivem-server-data/resources
+    dest: ./resources
+
+  - action: move_path
+    src: ./tmp/fivem-server-data/server.cfg
+    dest: ./server.cfg
+
+  # Clean up
+  - action: remove_path
+    path: ./tmp
+  - action: remove_path
+    path: ./resources/[fivem]/[test]
+
+  - action: remove_path
+    path: ./resources/[tmp]
+
+  - action: remove_path
+    path: ./resources/[fivem]/[local]
+
+  - action: remove_path
+    path: ./resources/[fivem]/[gameplay]/chat-theme-gtao
+
+
+  - action: remove_path
+    path: ./resources/[fivem]/[gameplay]/[examples]
+
+
+  - action: remove_path
+    path: ./resources/[fivem]/[system]/sessionmanager-rdr3
+
+  - action: remove_path
+    path: ./resources/[fivem]/[system]/runcode
+
+
+  - action: remove_path
+    path: ./resources/[fivem]/[system]/rconlog
+
+  - action: remove_path
+    path: ./resources/[fivem]/[gamemodes]/[maps]
