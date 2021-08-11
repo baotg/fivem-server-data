@@ -9,18 +9,22 @@ tasks:
   
   
   #  Download Files
-  - action: download_github
-    src: https://github.com/tgiabao1340/fivem-server-data
-    ref: main
-    dest: ./tmp/fivem-server-data
-  
+  - action: download_file
+    url: https://github.com/tgiabao1340/fivem-server-data/archive/master.zip
+    path: ./tmp/server-data.zip
+
+  # Unzip
+  - action: unzip
+    src: ./tmp/server-data.zip
+    dest: ./tmp
+
   # Move into directories
   - action: move_path
-    src: ./tmp/fivem-server-data/resources
+    src: ./tmp/fivem-server-data-master/resources
     dest: ./resources
 
   - action: move_path
-    src: ./tmp/fivem-server-data/server.cfg
+    src: ./tmp/fivem-server-data-master/server.cfg
     dest: ./server.cfg
 
   # Clean up
