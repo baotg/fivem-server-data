@@ -36,11 +36,11 @@ tasks:
     file: ./resources/[standalone]/ghmattimysql/config.json
     data: |
       {
-        "user": "${DB_USERNAME}",
-        "password": "${DB_PASSWORD}",
-        "host": "${DB_HOST}",
+        "user": ${DB_USERNAME},
+        "password": ${DB_PASSWORD},
+        "host": ${DB_HOST},
         "port": 3306,
-        "database": "${DB_NAME}"
+        "database": ${DB_NAME}
       }
   - action: replace_string
     mode: all_vars
